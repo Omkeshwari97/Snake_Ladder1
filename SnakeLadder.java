@@ -36,7 +36,7 @@ public class SnakeLadder
 			}
 
 			System.out.println("Current Die Postion: "+position);
-		}while(position!=100);
+		}while(position<=100);
 		
 		System.out.println("Final Position: "+position);
 	}
