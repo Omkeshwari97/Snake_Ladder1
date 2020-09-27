@@ -8,10 +8,11 @@ public class SnakeLadder
 
 	public static void main(String args[])
 	{
-		int position=0,dieNumber=0;
+		int position=0,dieNumber=0,diecount=0;
 
 		do
 		{	
+			diecount++;
 			if(position<0)
 				position=0;
 				
@@ -27,7 +28,8 @@ public class SnakeLadder
 								position=position+0;
 								break;
 				case LADDER:	System.out.println("LADDER");
-								position=position+dieNumber;
+								if(position+dieNumber<=100)
+									position=position+dieNumber;
 								break;
 				case SNAKE:		System.out.println("SNAKE");
 								position=position-dieNumber;
@@ -39,6 +41,7 @@ public class SnakeLadder
 		}while(position!=100);
 		
 		System.out.println("Final Position: "+position);
+		System.out.println("Total number of times dice is rolled for win: "+diecount);
 	}
 
 }
